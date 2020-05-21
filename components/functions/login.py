@@ -17,7 +17,7 @@ def loginFunction(username, password):
         if result == []:
             return "usernameError"
         else:
-            if sha256_crypt.verify(password, hashedPassword = result[0][2]):
+            if sha256_crypt.verify(password, result[0][2]):
                 return True
             else:
                 return "passwordError"
