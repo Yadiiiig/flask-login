@@ -1,0 +1,40 @@
+#page-content {
+  flex: 1 0 auto;
+}
+
+body {
+  background: gray;
+}
+
+#errorMessage {
+  color: red;
+}
+.cards {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 70%;
+}
+
+video {
+  display: block;
+  margin: 0 auto;
+}
+
+.text h3 {
+  display: inline-block;
+  margin: 0;
+}
+
+.userinput {
+  margin: 1px;
+  padding: 1px;
+  width: 500px;
+  height: 150px;
+  resize: none;
+}
+
+.cardlobbycreate {
+  max-width: 400px;
+  width: calc(100% - 20px);
+  padding: 0px 10px;
+}

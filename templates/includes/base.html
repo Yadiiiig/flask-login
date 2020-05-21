@@ -1,0 +1,50 @@
+<!doctype html>
+<head>
+    <title>{% block page %}{% endblock %} - Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand">Testing my Login!</a>
+            <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbar9">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar9">
+                <ul class="navbar-nav ml-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('root') }}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    {% if session['loggedin'] %}
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('success') }}">You are logged in! How?</a>
+                        </li>
+                        
+                    {% endif %}
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    {% if not session['loggedin'] %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('login') }}">Log-in</a>
+                        </li>
+                    {% elif session['loggedin'] %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('logout') }}">Log-out</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="fixed-bottom container text-center">
+        <small>Made by Yadiiiig</small>
+      </div>
+
+{% block content %}
+{% endblock %}
