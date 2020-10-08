@@ -2,6 +2,11 @@
 
 
 This is an example of a custom flask login. Feel free to use this in your projects.
+
+Database contains a test user:
+  - Username: test
+  - Password: willemsecurepass
+
 If you would find an exploit or have any problems using this, feel free to contact me:
   - Discord: Yadiiiig#0420
   - Mail: yadiiiig.dev@gmail.com
